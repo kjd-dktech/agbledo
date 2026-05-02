@@ -1,0 +1,33 @@
+# Deep Learning & Vision
+torch
+torchvision
+ultralytics
+opencv-python-headless
+Pillow
+
+# Explicabilité
+grad-cam
+
+# Tracking d'Expérimentations
+wandb
+
+# API de Déploiement
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# Application Frontend
+streamlit
+
+# Manipulation de Données & Utilitaires
+numpy
+pandas
+matplotlib
+scikit-learn
+tqdm
+python-dotenv
+jupyter
+
+# Tests
+pytest
