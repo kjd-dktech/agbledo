@@ -1,0 +1,21 @@
+# Emplacement des données (chemins relatifs par rapport au dossier d'exécution)
+path: ../data/processed
+train: train
+val: val
+test: test
+
+# Nombre de classes
+nc: 10
+
+# Noms des classes
+names:
+  0: Cassava___Bacterial_Blight
+  1: Cassava___Brown_Spot
+  2: Cassava___Healthy
+  3: Cassava___Mosaic
+  4: Corn___Common_Rust
+  5: Corn___Fall_Armyworm
+  6: Corn___Gray_Leaf_Spot
+  7: Corn___Healthy
+  8: Corn___Northern_Leaf_Blight
+  9: Corn___Streak_Virus

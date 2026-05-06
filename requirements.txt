@@ -9,7 +9,7 @@ Pillow
 grad-cam
 
 # Tracking d'Expérimentations
-wandb
+mlflow
 
 # API de Déploiement
 fastapi
@@ -24,6 +24,7 @@ streamlit
 numpy
 pandas
 matplotlib
+seaborn
 scikit-learn
 tqdm
 python-dotenv

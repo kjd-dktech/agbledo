@@ -1,0 +1,36 @@
+# ==============================================================================
+# AgbleDɔ́_01 - Configuration du Modèle
+# Maintainer : Kodjo Jean DEGBEVI
+# ==============================================================================
+
+# --- Paramètres Modèle et Environnement ---
+model: "yolo11s.pt"  # Poids pré-entraînés initiaux de base (v11 small)
+device: 0            # GPU
+imgsz: 640           # Résolution d'image standard YOLO
+batch: 16            # Taille de lot
+workers: 4           # DataLoader workers
+
+# --- Paramètres d'Apprentissage ---
+epochs: 50           # Époques maximales
+patience: 10         # Early Stopping
+optimizer: "auto"    # Optimiseur par défaut de YOLO
+lr0: 0.01            # Taux d'apprentissage initial
+lrf: 0.01            # Taux d'apprentissage final (lr0 * lrf)
+weight_decay: 0.0005 # L2 regularization
+
+# --- Documentation du Class Weighting ---
+# J'ai calculé le déséquilibre lors de l'EDA: 1:10 environ.
+# Ultralytics (YOLO) calcule automatiquement les poids de classes via la fréquence
+# d'occurrence dans les données d'entraînement. 
+# En l'absence de paramètre explicite comme `class_weights` en v11 via CLI, 
+# la Focal Loss implicite et l'augmentation de données gèrent une grande partie du biais.
+
+# --- Data Augmentation ---
+hsv_h: 0.015         # Ajustement teinte (HSV)
+hsv_s: 0.7           # Ajustement saturation
+hsv_v: 0.4           # Ajustement luminosité
+degrees: 0.0         # Pas de rotation agressive
+translate: 0.1       # Translation
+scale: 0.5           # Mise à l'échelle (+/- 50%)
+fliplr: 0.5          # Random horizontal flip
+mosaic: 1.0          # Active la mosaïque (4 images en 1)
