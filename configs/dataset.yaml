@@ -1,13 +1,10 @@
-# Emplacement des données (chemins relatifs par rapport au dossier d'exécution)
 path: ../data/processed
 train: train
 val: val
 test: test
 
-# Nombre de classes
 nc: 10
 
-# Noms des classes
 names:
   0: Cassava___Bacterial_Blight
   1: Cassava___Brown_Spot
