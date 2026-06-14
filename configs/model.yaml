@@ -18,13 +18,6 @@ lr0: 0.01            # Taux d'apprentissage initial
 lrf: 0.01            # Taux d'apprentissage final (lr0 * lrf)
 weight_decay: 0.0005 # L2 regularization
 
-# --- Documentation du Class Weighting ---
-# J'ai calculé le déséquilibre lors de l'EDA: 1:10 environ.
-# Ultralytics (YOLO) calcule automatiquement les poids de classes via la fréquence
-# d'occurrence dans les données d'entraînement. 
-# En l'absence de paramètre explicite comme `class_weights` en v11 via CLI, 
-# la Focal Loss implicite et l'augmentation de données gèrent une grande partie du biais.
-
 # --- Data Augmentation ---
 hsv_h: 0.015         # Ajustement teinte (HSV)
 hsv_s: 0.7           # Ajustement saturation

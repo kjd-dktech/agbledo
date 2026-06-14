@@ -14,7 +14,7 @@ import pandas as pd
 ROOT_DIR = Path(__file__).parent.parent
 test_dir = ROOT_DIR / "tests"
 sys.path.append(str(ROOT_DIR))
-from src.data.preprocessing import DatasetBuilder
+from src.data.preprocessing import DatasetBuilder # noqa: E402
 
 @pytest.fixture
 def builder():

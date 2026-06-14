@@ -1,0 +1,44 @@
+[project]
+name = "agbledo"
+version = "0.1.0"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+
+ml = [
+    "torch",
+    "torchvision",
+    "ultralytics",
+    "opencv-python-headless",
+    "Pillow",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "mlflow",
+]
+
+explainability = [
+    "grad-cam",
+]
+
+api = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "python-multipart",
+]
+
+frontend = [
+    "streamlit",
+]
+
+dev = [
+    "pytest",
+    "ruff",
+]

@@ -1,0 +1,40 @@
+name: CI AgbleDɔ̀
+
+on:
+  push:
+    branches:
+        - develop
+        - main
+  pull_request:
+    branches:
+        - develop
+        - main
+
+jobs:
+  lint-and-test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Configuration de Python 3.14
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          allow-prereleases: true
+          cache: "pip"
+
+      - name: Installation des dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Vérification du formatage et Linting avec Ruff
+        run: |
+          ruff check src/ tests/ app/ api/
+
+      - name: Exécution des tests unitaires avec Pytest
+        run: |
+          pytest tests/
