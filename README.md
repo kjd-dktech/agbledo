@@ -48,8 +48,8 @@ Ce projet justifie ses classes et hypothèses par la littérature ouest-africain
 - [x] Architecture ML
 - [x] Entraînement du classifieur
 - [x] Évaluation formelle du classifieur
-- [] Explicabilité du classifieur
-- [] Benchmarks
+- [ ] Explicabilité du classifieur
+- [ ] Benchmarks
 
 #### Industrialisation
 - [ ] Export ONNX
@@ -69,7 +69,21 @@ Ce projet justifie ses classes et hypothèses par la littérature ouest-africain
 
 ### Résultats actuels
 
-- Modèle `agbledɔ01.pt` disponible sur [Hugging Face](https://huggingface.co/kjd-dktech/agbledo01)
+#### **agbledɔ01**
+
+Modèle `agbledɔ01.pt` disponible sur [Hugging Face](https://huggingface.co/kjd-dktech/agbledo01)
+
+**Performances**
+
+| Jeu de données | Top-1 Accuracy | Top-5 Accuracy |
+|---------------|---------------|---------------|
+| **Entraînement** | **94.30 %** | **100.00 %** |
+| **Test formel** | **92.64 %** | **99.95 %** |
+
+**Note :**
+- Les résultats ci-dessus correspondent aux performances sur les données d'entraînement et sur un jeu de test formel.
+- Les évaluations en conditions réelles (terrain) sont prévues dans une phase ultérieure.
+- Les analyses d'interprétabilité (Grad-CAM) n'ont pas encore été réalisées.
 
 ---
 
