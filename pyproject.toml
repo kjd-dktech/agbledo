@@ -38,7 +38,14 @@ frontend = [
     "streamlit",
 ]
 
-dev = [
+dev+ = [
     "pytest",
     "ruff",
+]
+
+dev+ = [
+    "pytest",
+    "ruff",
+    "Pillow",
+    "scikit-learn",
 ]
