@@ -38,12 +38,12 @@ frontend = [
     "streamlit",
 ]
 
-dev+ = [
+dev = [
     "pytest",
     "ruff",
 ]
 
-dev+ = [
+dev-plus = [
     "pytest",
     "ruff",
     "Pillow",
